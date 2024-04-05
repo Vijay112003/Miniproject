@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-xlarge.css" />
 	</noscript>
+	<link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
 <body class="landing"><!-- Header -->
