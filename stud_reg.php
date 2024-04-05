@@ -22,12 +22,11 @@
     $stud_email = $_POST["stud_mail"];
     $parent_email = $_POST["parent_mail"];
     $stud_pass = $_POST["stud_pass"];
-    $staff = $_POST['staff'];
     $stud_query1 = "SELECT * FROM student WHERE reg_num='" . $stud_reg . "'";
     $query_res1 = $conn->query($stud_query1);
     if (mysqli_num_rows($query_res1) != 1) {
-      $stud_query2 = "INSERT INTO student_req (reg_num, stud_name, degree, dept, mobile, stud_email, parent_email, staff_id, stud_pass)
-      VALUES ('$stud_reg', '$stud_name', '$stud_degree', '$stud_dept', '$stud_phone', '$stud_email', '$parent_email', '$staff', '$stud_pass')";
+      $stud_query2 = "INSERT INTO student_req (reg_num, stud_name, degree, dept, mobile, stud_email, parent_email,  stud_pass)
+      VALUES ('$stud_reg', '$stud_name', '$stud_degree', '$stud_dept', '$stud_phone', '$stud_email', '$parent_email', '$stud_pass')";
       if ($conn->query($stud_query2)) {
         $to = "sasinathengineer@gmail.com";
         $subject = "New request";

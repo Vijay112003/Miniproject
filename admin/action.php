@@ -11,8 +11,9 @@ if ($_POST['status'] == 'approved') {
         $mobile = $_POST['mobile'];
         $stud_email = $_POST['stud_email'];
         $parent_email = $_POST['parent_email'];
+        $staff_id = $_POST['staff_id'];
         $stud_pass = $_POST['stud_pass'];
-        $stud_query3 = "INSERT INTO student (reg_num, stud_name, degree, dept, mobile, stud_email, parent_email, stud_pass) VALUES ('$reg_num','$stud_name','$degree','$dept','$mobile','$stud_email','$parent_email','$stud_pass')";
+        $stud_query3 = "INSERT INTO student (reg_num, stud_name, degree, dept, mobile, stud_email, parent_email, staff_id, stud_pass) VALUES ('$reg_num','$stud_name','$degree','$dept','$mobile','$stud_email','$parent_email', '$staff_id', '$stud_pass')";
         $stud_query4 = "DELETE FROM student_req WHERE reg_num= '$reg_num';";
         if ($conn->query($stud_query3) && $conn->query($stud_query4)) {
             $to = $stud_email;
@@ -63,7 +64,9 @@ if ($_POST['status'] == 'approved') {
     }
 } else if ($_POST['status'] == 'decline') {
     if ($_POST['roll'] == 'stud') {
-        $stud_query5 = "DELETE FROM stud_req WHERE reg_num = '" . $_POST['reg_num'] . "'";
+        $reg_num = $_POST['reg_num'];
+        //echo $reg_num;
+        $stud_query5 = "DELETE FROM student_req WHERE `student_req`.`reg_num` = '$reg_num'";
         if ($conn->query($stud_query5)) {
             $to = $_POST['stud_email'];
             $subject = "Request Declined";
@@ -75,15 +78,18 @@ if ($_POST['status'] == 'approved') {
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
             $check = mail("$to", "$subject", "$message", "$headers");
             if ($check) {
-                echo ("<script>alert('Declined');window.location='requests.php';</script>");
+                 echo ("<script>alert('Declined');window.location='requests.php';</script>");
             } else {
                 echo ("<script>alert('Declined But email doesn't sent');window.location='requests.php';</script>");
             }
         } else {
+            echo "<br>doesn't Deleted";
             echo ("<script>alert('Something went wrong');window.location='requests.php';</script>");
         }
     } else if ($_POST['roll'] == 'staff') {
-        $staff_query5 = "DELETE FROM stud_req WHERE reg_num = '" . $_POST['staff_id'] . "'";
+        $staff_id=$_POST['staff_id'];
+        echo $staff_id;
+        $staff_query5 = "DELETE FROM staff_req WHERE staff_id = '$staff_id'";
         if ($conn->query($staff_query5)) {
             $to = $_POST['email'];
             $subject = "Request Declained";
@@ -100,6 +106,7 @@ if ($_POST['status'] == 'approved') {
                 echo ("<script>alert('Declined But email doesn't sent');window.location='requests.php';</script>");
             }
         } else {
+            echo"doesn't delete";
             echo ("<script>alert('Something went wrong');window.location='requests.php';</script>");
         }
     }

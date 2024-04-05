@@ -34,7 +34,6 @@ try {
                             mobile varchar(10) unique not null,
                             stud_email VARCHAR(50) unique not null,
                             parent_email VARCHAR(50) unique not null,
-                            staff_id INT(2) not null,
                             stud_pass varchar(16) not null,
                             PRIMARY KEY(reg_num)
                         );";
@@ -65,9 +64,12 @@ try {
                     )";
                     $query31 = "CREATE TABLE IF NOT EXISTS gate_entry(
                         serial_num INT(4) AUTO_INCREMENT not null,
+                        person VARCHAR(10),
                         staff_or_stud_id VARCHAR(12) not null,
                         reason VARCHAR(100) not null,
-                        entry_time time
+                        entry_date DATE,
+                        entry_time TIME,
+                        primary key(serial_num)
                     )";
                 $query4 = "CREATE TABLE IF NOT EXISTS admin_abs(
                         admin_num int(2) not null,

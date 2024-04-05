@@ -9,7 +9,7 @@ error_reporting(0);
 <head>
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
     <link rel='stylesheet' href='assests/css/style.css'>
-    <title>GATE</title>
+    <title>STAFF</title>
     <meta http-equiv='content-type' content='text/html; charset=utf-8' />
     <meta name='description'
         content='The web based alert and reporting system for absentees and late comers of an organization' />

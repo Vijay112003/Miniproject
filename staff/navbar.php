@@ -2,7 +2,6 @@
     <ul>
     <li><a href='index.php'>HOME</a></li>
         <li><a href='today.php'>TODAY ACTIVITY</a></li>
-        <li><a href='profile.php'>MY PROFILE</a></li>
         <li>
             <a href='#'>REPORTS</a>
             <ul>

@@ -26,6 +26,7 @@ error_reporting(0);
         <link rel='stylesheet' href='css/style-xlarge.css' />
     </noscript>
 </head>
+<body>
 <?php
 $pass = $_SESSION["password"];
 $id=$_SESSION['user_name'];

@@ -2,9 +2,6 @@
     <ul>
         <li><a href='index.php'>HOME</a></li>
         <li>
-            <a href='reports.php'>PROFILE</a>
-        </li>
-        <li>
             <a href='reports.php'>MY REPORT</a>
         </li>
         <li>
