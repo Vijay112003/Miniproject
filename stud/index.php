@@ -18,10 +18,10 @@ if (mysqli_num_rows($query_res)) {
                         <nav id='nav'>
                             <ul>
                                 <li>
-                                    <a href='reports.php'>MY REPORT</a>
+                                    <a href='reports.php'>LATE ENTRY</a>
                                 </li>
                                 <li>
-                                    <a href='requests.php'>REQUSET</a>
+                                    <a href='requests.php'>ATTENDANCE</a>
                                 </li>
                                 <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#studModal' data-image-id='1'>
                                 <a href='../log-out.php'>Log-out</a>

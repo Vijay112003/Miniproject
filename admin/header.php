@@ -26,7 +26,7 @@ error_reporting(0);
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style-xlarge.css" />
     </noscript>
-</head>
+</head><body>
 <?php
 $pass= $_SESSION['password'];
 $admin_query1 = "SELECT * FROM admin_abs WHERE admin_pass='" . $_SESSION['password'] . "'";

@@ -2,10 +2,10 @@
     <ul>
         <li><a href='index.php'>HOME</a></li>
         <li>
-            <a href='reports.php'>MY REPORT</a>
+            <a href='reports.php'>LATE ENTRY</a>
         </li>
         <li>
-            <a href='requests.php'>REQUSET</a>
+            <a href='requests.php'>ATTENDANCE</a>
         </li>
         <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#adminModal'
                 data-image-id='1'>

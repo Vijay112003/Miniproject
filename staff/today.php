@@ -10,7 +10,7 @@ if (mysqli_num_rows($query_res) == 1) {
     <body class='landing'>
         <!-- Header -->
         <header id='header'>
-            <h1 id='logo'>TODAY ENTRIES</h1>
+            <h1 id='logo'>TODAY LATE ENTRIES</h1>
             <?php include ("navbar.php");
             $current_date = date("Y-m-d");
             $student_entries = []; // Initialize array to store student requests

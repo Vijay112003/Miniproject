@@ -22,7 +22,7 @@ if (mysqli_num_rows($query_res) == 1) {
             }
             ?>
             <br><br>
-        </header>
+        </header><br><br>
         <section>
             <div class="container mt-4">
                 <table class="table">

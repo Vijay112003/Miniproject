@@ -48,7 +48,7 @@ if ($_POST['person'] == 'student') {
 
             // Check if both emails were sent successfully
             if ($check1 && $check2) {
-                $staff_id = $row['staff_id'];
+                $staff_id = $row1['staff_id'];
                 $staff_mail_query = "SELECT email FROM staff WHERE staff_id = '$staff_id'";
                 $result = $conn->query($staff_mail_query);
                 if(mysqli_num_rows($result) == 1){
@@ -74,18 +74,15 @@ if ($_POST['person'] == 'student') {
         echo ("<script>alert('Invalid user');window.location='index.php';</script>");
     }
 } else if ($_POST['person'] == 'staff') {
-    echo ('staff');
     $person = $_POST['person'];
     $staff_id = $_POST['staff_id'];
     $reason = $_POST['reason'];
     $staff_query6 = "SELECT * FROM staff where staff_id='" . $staff_id . "'";
     $query_res2 = $conn->query($staff_query6);
     if (mysqli_num_rows($query_res2) == 1) {
-        echo ('fetch');
         $row1 = $query_res2->fetch_assoc();
         $stud_query7 = "INSERT INTO gate_entry (person, staff_or_stud_id, reason, entry_date, entry_time) VALUES ('$person','$staff_id','$reason','$current_date','$current_time')";
         if ($conn->query($stud_query7)) {
-            echo ('insert');
             $to3 = $row1['email'];
             $subject1 = "Late Entry Alert";
             $message3 = "<html><body>";

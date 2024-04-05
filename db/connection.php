@@ -76,7 +76,26 @@ try {
                         admin_pass varchar(16) not null,
                         primary key(admin_num)
                     )";
-                if ($conn->query($query1) == TRUE && $conn->query($query11) == TRUE && $conn->query($query2) == TRUE && $conn->query($query21) == TRUE && $conn->query($query3) == TRUE && $conn->query($query31) == TRUE && $conn->query($query4) == TRUE) {
+                    $query41 = "CREATE TABLE IF NOT EXISTS stud_attendance(
+                        serial_num INT(4) AUTO_INCREMENT not null,
+                        reg_num VARCHAR(12) not null,
+                        entry_date DATE not null,
+                        entry_time TIME not null,
+                        entry_status varchar(10) not null,
+                        entry_reason varchar(100) not null,
+                        entry_staff_id int(2) not null,
+                        primary key(serial_num)
+                    )";
+                    $query42 = "CREATE TABLE IF NOT EXISTS staff_attendance(
+                        serial_num INT(4) AUTO_INCREMENT not null,
+                        staff_id VARCHAR(12) not null,
+                        entry_date DATE not null,
+                        entry_time TIME not null,
+                        entry_status varchar(10) not null,
+                        entry_reason varchar(100) not null,
+                        primary key(serial_num)
+                    )";
+                if ($conn->query($query1) == TRUE && $conn->query($query11) == TRUE && $conn->query($query2) == TRUE && $conn->query($query21) == TRUE && $conn->query($query3) == TRUE && $conn->query($query31) == TRUE && $conn->query($query4) == TRUE && $conn->query($query41) == TRUE && $conn->query($query42) == TRUE) {
                     // echo("<script>alert('Welcome');</script>");
                 } else {
                     // echo("<br>Table doesn't created");
