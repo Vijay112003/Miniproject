@@ -33,6 +33,7 @@ if (mysqli_num_rows($query_res) == 1) {
                 <ul>
                 <li><a href='report.php'>TODAY</a></li>
                 <li><a href='all.php'>OVERALL</a></li>
+                <li><a href='myattendreport.php'>MY ATTENDANCE</a></li>
             </ul>
             </li>
             </ul>

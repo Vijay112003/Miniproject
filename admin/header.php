@@ -27,6 +27,15 @@ error_reporting(0);
         <link rel="stylesheet" href="css/style-xlarge.css" />
     </noscript>
     <link rel="icon" type="image/png" href="../images/logo.png">
+    <style>
+    .box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
 </head><body>
 <?php
 $pass= $_SESSION['password'];
