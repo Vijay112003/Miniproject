@@ -24,10 +24,10 @@
                 </li>
             </ul>
         </li>
-        <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#adminModal'
-                data-image-id='1'>
-                <a href='../log-out.php'>Log-out</a>
-            </button></li>
+        <li>
+            <a href='../log-out.php'><button type='button' class='btn btn-primary' data-toggle='modal'
+                    data-target='#adminModal' data-image-id='1'>Log-out</button></a>
+        </li>
     </ul>
 </nav>
 </header>

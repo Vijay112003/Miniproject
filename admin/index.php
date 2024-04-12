@@ -60,10 +60,10 @@ if (mysqli_num_rows($query_res) == 1) {
                                 </li>
                             </ul>
                         </li>
-                        <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#adminModal'
-                                data-image-id='1'>
-                                <a href='../log-out.php'>Log-out</a>
-                            </button></li>
+                        <li>
+                            <a href='../log-out.php'><button type='button' class='btn btn-primary' data-toggle='modal'
+                                    data-target='#adminModal' data-image-id='1'>Log-out</button></a>
+                        </li>
                     </ul>
                 </nav>
             </header><br><br>
@@ -113,48 +113,48 @@ if (mysqli_num_rows($query_res) == 1) {
                                     <a href="staffreport.php">View</a>
                                 </td>
                             </tr> -->
-                            
+
                         </tbody>
                     </table>
             </section><br><br>
 
-<section>
-    <div class="container mt-4">
-        <h1 style="color:White">ABSENTEES</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Key</th>
-                    <th scope="col">Value</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="color:white">
-                        Students
-                    </td>
-                    <td style="color:white">
-                        <?php echo $stud_count_attend; ?>
-                    </td>
-                    <td style="color:white">
-                        <a href="all.php">View</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="color:white">
-                        Staffs
-                    </td>
-                    <td style="color:white">
-                        <?php echo $staff_count_attend; ?>
-                    </td>
-                    <td style="color:white">
-                        <a href="all.php">View</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
+            <section>
+                <div class="container mt-4">
+                    <h1 style="color:White">ABSENTEES</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Key</th>
+                                <th scope="col">Value</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:white">
+                                    Students
+                                </td>
+                                <td style="color:white">
+                                    <?php echo $stud_count_attend; ?>
+                                </td>
+                                <td style="color:white">
+                                    <a href="all.php">View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color:white">
+                                    Staffs
+                                </td>
+                                <td style="color:white">
+                                    <?php echo $staff_count_attend; ?>
+                                </td>
+                                <td style="color:white">
+                                    <a href="all.php">View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
 
             <?php
             include ("footer.php");
