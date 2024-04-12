@@ -12,9 +12,9 @@ if (mysqli_num_rows($query_res) == 1) {
                         <ul>
                             <li><a href='today.php'>TODAY ENTRIES</a></li>
                             <li><a href='all.php'>ALL ENTRIES</a></li>
-                            <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#adminModal' data-image-id='1'>
-                            <a href='../log-out.php'>Log-out</a>
-                          </button></li>
+                            <li>
+                            <a href='../log-out.php'><button type='button' class='btn btn-primary'>Log-out</button></a>
+                        </li>
                         </ul>
                     </nav>
                 </header>");

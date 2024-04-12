@@ -22,10 +22,9 @@ if (mysqli_num_rows($query_res)) {
                                 </li>
                                 <li>
                                     <a href='requests.php'>ATTENDANCE</a>
+                                    <li>
+                                    <a href='../log-out.php'><button type='button' class='btn btn-primary'>Log-out</button></a>
                                 </li>
-                                <li><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#studModal' data-image-id='1'>
-                                <a href='../log-out.php'>Log-out</a>
-                              </button></li>
                             </ul>
                         </nav>
                     </header>
